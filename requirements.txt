@@ -1,0 +1,10 @@
+# Dipendenze dirette del progetto, con le versioni usate nel .venv.
+# Installazione: .venv/bin/pip install -r requirements.txt
+psycopg2-binary==2.9.13
+pyproj==3.8.0
+pystac-client==0.9.1
+python-dotenv==1.2.4
+rasterio==1.5.2
+
+# Non importata direttamente dagli script: la usa rasterio per i dati raster.
+numpy==2.5.4

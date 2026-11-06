@@ -1,0 +1,17 @@
+# --- Ambiente Python ---
+.venv/
+__pycache__/
+*.py[cod]
+
+# --- IDE ---
+.idea/
+
+# --- Output raster / immagini (rigenerabili dalla pipeline) ---
+*.tif
+*.png
+
+# --- Segreti ---
+.env
+
+# --- macOS ---
+.DS_Store

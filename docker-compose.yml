@@ -1,0 +1,18 @@
+services:
+  db:
+    image: kartoza/postgis:15-3.4
+    container_name: geoint_postgis
+    environment:
+      - POSTGRES_USER=geoint_admin
+      # Password letta da .env (non versionato). Modello: .env.example
+      - POSTGRES_PASS=${POSTGRES_PASS:?Definisci POSTGRES_PASS nel file .env (vedi .env.example)}
+      - POSTGRES_DBNAME=geoint_core
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgis_data:
+  
